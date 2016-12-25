@@ -99,5 +99,6 @@ int main() {
             << dfbc(1.0, 2.0, 3.0) << std::endl;
   std::cout << dfac(1.0, 2.0, 3.0) << " " << dfbc(1.0, 2.0, 3.0) << " "
             << dfcc(1.0, 2.0, 3.0) << std::endl;
+
   return 0;
 }
