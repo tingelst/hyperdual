@@ -52,52 +52,52 @@ T dfcc(T a, T b, T c) {
 }
 
 int main() {
-  std::cout << f(hyperdual(1.0, 1.0, 1.0, 0.0), hyperdual(1.0, 0.0, 0.0, 0.0),
-                 hyperdual(1.0, 0.0, 0.0, 0.0))
+  std::cout << f(hyperdual(1.0, 1.0, 1.0, 0.0), hyperdual(2.0, 0.0, 0.0, 0.0),
+                 hyperdual(3.0, 0.0, 0.0, 0.0))
                    .eps1eps2()
             << " ";
-  std::cout << f(hyperdual(1.0, 1.0, 0.0, 0.0), hyperdual(1.0, 0.0, 1.0, 0.0),
-                 hyperdual(1.0, 0.0, 0.0, 0.0))
+  std::cout << f(hyperdual(1.0, 1.0, 0.0, 0.0), hyperdual(2.0, 0.0, 1.0, 0.0),
+                 hyperdual(3.0, 0.0, 0.0, 0.0))
                    .eps1eps2()
             << " ";
-  std::cout << f(hyperdual(1.0, 1.0, 0.0, 0.0), hyperdual(1.0, 0.0, 0.0, 0.0),
-                 hyperdual(1.0, 0.0, 1.0, 0.0))
+  std::cout << f(hyperdual(1.0, 1.0, 0.0, 0.0), hyperdual(2.0, 0.0, 0.0, 0.0),
+                 hyperdual(3.0, 0.0, 1.0, 0.0))
                    .eps1eps2()
             << std::endl;
 
-  std::cout << f(hyperdual(1.0, 0.0, 1.0, 0.0), hyperdual(1.0, 1.0, 0.0, 0.0),
-                 hyperdual(1.0, 0.0, 0.0, 0.0))
+  std::cout << f(hyperdual(1.0, 0.0, 1.0, 0.0), hyperdual(2.0, 1.0, 0.0, 0.0),
+                 hyperdual(3.0, 0.0, 0.0, 0.0))
                    .eps1eps2()
             << " ";
-  std::cout << f(hyperdual(1.0, 0.0, 0.0, 0.0), hyperdual(1.0, 1.0, 1.0, 0.0),
-                 hyperdual(1.0, 0.0, 0.0, 0.0))
+  std::cout << f(hyperdual(1.0, 0.0, 0.0, 0.0), hyperdual(2.0, 1.0, 1.0, 0.0),
+                 hyperdual(3.0, 0.0, 0.0, 0.0))
                    .eps1eps2()
             << " ";
-  std::cout << f(hyperdual(1.0, 0.0, 0.0, 0.0), hyperdual(1.0, 1.0, 0.0, 0.0),
-                 hyperdual(1.0, 0.0, 1.0, 0.0))
+  std::cout << f(hyperdual(1.0, 0.0, 0.0, 0.0), hyperdual(2.0, 1.0, 0.0, 0.0),
+                 hyperdual(3.0, 0.0, 1.0, 0.0))
                    .eps1eps2()
             << std::endl;
 
-  std::cout << f(hyperdual(1.0, 0.0, 1.0, 0.0), hyperdual(1.0, 0.0, 0.0, 0.0),
-                 hyperdual(1.0, 1.0, 0.0, 0.0))
+  std::cout << f(hyperdual(1.0, 0.0, 1.0, 0.0), hyperdual(2.0, 0.0, 0.0, 0.0),
+                 hyperdual(3.0, 1.0, 0.0, 0.0))
                    .eps1eps2()
             << " ";
-  std::cout << f(hyperdual(1.0, 0.0, 0.0, 0.0), hyperdual(1.0, 0.0, 1.0, 0.0),
-                 hyperdual(1.0, 1.0, 0.0, 0.0))
+  std::cout << f(hyperdual(1.0, 0.0, 0.0, 0.0), hyperdual(2.0, 0.0, 1.0, 0.0),
+                 hyperdual(3.0, 1.0, 0.0, 0.0))
                    .eps1eps2()
             << " ";
-  std::cout << f(hyperdual(1.0, 0.0, 0.0, 0.0), hyperdual(1.0, 0.0, 0.0, 0.0),
-                 hyperdual(1.0, 1.0, 1.0, 0.0))
+  std::cout << f(hyperdual(1.0, 0.0, 0.0, 0.0), hyperdual(2.0, 0.0, 0.0, 0.0),
+                 hyperdual(3.0, 1.0, 1.0, 0.0))
                    .eps1eps2()
             << std::endl;
 
   std::cout << std::endl;
 
-  std::cout << dfaa(1.0, 1.0, 1.0) << " " << dfab(1.0, 1.0, 1.0) << " "
-            << dfac(1.0, 1.0, 1.0) << std::endl;
-  std::cout << dfab(1.0, 1.0, 1.0) << " " << dfbb(1.0, 1.0, 1.0) << " "
-            << dfbc(1.0, 1.0, 1.0) << std::endl;
-  std::cout << dfac(1.0, 1.0, 1.0) << " " << dfbc(1.0, 1.0, 1.0) << " "
-            << dfcc(1.0, 1.0, 1.0) << std::endl;
+  std::cout << dfaa(1.0, 2.0, 3.0) << " " << dfab(1.0, 2.0, 3.0) << " "
+            << dfac(1.0, 2.0, 3.0) << std::endl;
+  std::cout << dfab(1.0, 2.0, 3.0) << " " << dfbb(1.0, 2.0, 3.0) << " "
+            << dfbc(1.0, 2.0, 3.0) << std::endl;
+  std::cout << dfac(1.0, 2.0, 3.0) << " " << dfbc(1.0, 2.0, 3.0) << " "
+            << dfcc(1.0, 2.0, 3.0) << std::endl;
   return 0;
 }
