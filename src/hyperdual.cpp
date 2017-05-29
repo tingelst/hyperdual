@@ -100,5 +100,8 @@ int main() {
   std::cout << dfac(1.0, 2.0, 3.0) << " " << dfbc(1.0, 2.0, 3.0) << " "
             << dfcc(1.0, 2.0, 3.0) << std::endl;
 
+ //std::cout <<"ERF "<< erf(hyperdual(1.0, 1.0, 1.0, 0.0)).eps1()<< std::endl;
+ //std::cout <<"ERF "<< erf(hyperdual(1.0, 1.0, 1.0, 0.0)).eps1eps2()<< std::endl;
+
   return 0;
 }
