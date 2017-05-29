@@ -32,8 +32,12 @@
 #define _hyperdual_h
 
 #include <iostream>
+#include <stdio.h>
 #include <math.h>
 using namespace std;
+#ifndef M_PI
+#define M_PI std::acos(-1.)
+#endif
 
 class hyperdual {
   double f0, f1, f2, f12;
@@ -75,6 +79,7 @@ class hyperdual {
   friend hyperdual pow(hyperdual x, double a);
   friend hyperdual pow(hyperdual x, hyperdual a);
   friend hyperdual exp(hyperdual x);
+  friend hyperdual erf(hyperdual x);
   friend hyperdual log(hyperdual x);
   friend hyperdual sin(hyperdual x);
   friend hyperdual cos(hyperdual x);
@@ -297,6 +302,18 @@ hyperdual exp(hyperdual x) {
   temp.f1 = deriv * x.f1;
   temp.f2 = deriv * x.f2;
   temp.f12 = deriv * (x.f12 + x.f1 * x.f2);
+  return temp;
+}
+hyperdual erf(hyperdual x) {
+  hyperdual temp;
+  double funval, deriv;
+  funval = erf(x.f0);
+  double deriv1=exp(-1.0*x.f0*x.f0)*2/sqrt(M_PI);
+  deriv = deriv1;
+  temp.f0 = funval;
+  temp.f1 = deriv * x.f1;
+  temp.f2 = deriv * x.f2;
+  temp.f12 = deriv * x.f12 + x.f1 * x.f2 *(-2.0*x.f0*deriv1);
   return temp;
 }
 hyperdual log(hyperdual x) {
